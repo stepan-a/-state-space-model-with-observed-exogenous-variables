@@ -1,0 +1,2 @@
+MATLAB=`which matlab`
+DYNARE_PATH=/home/toto/dynare/matlab
