@@ -13,6 +13,9 @@ clean:
 	@rm -f simulexogenousvariables_set_auxiliary_variables.m
 	@rm -f simulexogenousvariables.log
 
+cleanall: clean
+	@rm -f sample.mat
+
 sample.mat: simulsample.m observed_exogenous_variables.mat 
 	@echo "Simulating observed exogenous variables..."
 	@$(MATLAB) -r "addpath $(DYNARE_PATH); dynare_config; simulsample; quit" > /dev/null 
