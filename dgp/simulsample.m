@@ -6,12 +6,7 @@ T = ts.nobs;
 
 x = zeros(T, 1);
 
-sigma = .10;
-alpha = .95;
-
-beta_x = .05;
-beta_y = .10;
-
+calibration;
 
 for t=2:T
     x(t) = alpha*x(t-1) + beta_x*ts.u.data(t) + sigma*randn(1); 

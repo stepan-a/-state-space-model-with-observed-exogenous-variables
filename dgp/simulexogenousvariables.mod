@@ -4,10 +4,7 @@ varexo eu, ev;
 
 parameters rho_u sig_u dri_v sig_v ;
 
-rho_u = 0.90;
-sig_u = 0.10;
-dri_v = 0.05;
-sig_v = 1.00;
+@#include "calibration.inc"
 
 model;
 u = rho_u*u(-1) + (v-v(-1))*eu*sig_u ;
