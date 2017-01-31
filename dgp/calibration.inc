@@ -1,4 +1,6 @@
-rho_u = 0.90;
+rho_u = 0.95;
 sig_u = 0.10;
-dri_v = 0.05;
-sig_v = 1.00;
+
+rho_v   = 0.05;
+const_v =  .10;
+sig_v   = 1.00;

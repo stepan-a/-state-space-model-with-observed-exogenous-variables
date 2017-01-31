@@ -2,13 +2,13 @@ var u, v;
 
 varexo eu, ev;
 
-parameters rho_u sig_u dri_v sig_v ;
+parameters rho_u sig_u rho_v const_v sig_v ;
 
 @#include "calibration.inc"
 
 model;
 u = rho_u*u(-1) + (v-v(-1))*eu*sig_u ;
-v = v(-1) + dri_v + sig_v*ev ;
+v = rho_v*v(-1) + const_v + sig_v*ev ;
 end;
 
 histval;
